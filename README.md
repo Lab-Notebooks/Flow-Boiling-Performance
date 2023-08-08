@@ -1,4 +1,4 @@
-# <p align="center"> Flow Boiling Simulations </p>
+## Flow Boiling Simulations
 
 A lab notebook archive of flow boiling simulations derived from:
 - https://github.com/akashdhruv/Multiphase-Simulations
