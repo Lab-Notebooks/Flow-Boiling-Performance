@@ -1,0 +1,4 @@
+# Archive log files downloaded from else where
+job:
+  archive:
+    - "*.log"
