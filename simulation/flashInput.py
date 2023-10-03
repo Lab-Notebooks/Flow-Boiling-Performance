@@ -1,7 +1,7 @@
 """Script to create input files"""
 
+import os
 import toml
-import argparse
 import numpy
 import h5py
 from scipy.stats import qmc
@@ -11,8 +11,7 @@ def createParfile(inputDict):
     """
     Create flash.par
     """
-    with open("flash.par", "w") as parfile:
-
+    with open(os.getenv("JobWorkDir") + os.sep + "flash.par", "w") as parfile:
         # Add comment to the parfile
         parfile.write("# Programmatically generated parfile for flashx\n")
 
@@ -43,7 +42,9 @@ def createHeaterfile(inputDict):
     Create heater file
     """
     heaterInfo = inputDict["Heater"]
-    filename = h5py.File(heaterInfo["name"] + "_hdf5_htr_0001", "w")
+    filename = h5py.File(
+        os.getenv("JobWorkDir") + os.sep + heaterInfo["name"] + "_hdf5_htr_0001", "w"
+    )
 
     xsite = numpy.ndarray([heaterInfo["numSites"]], dtype=float)
     ysite = numpy.ndarray([heaterInfo["numSites"]], dtype=float)
@@ -57,7 +58,6 @@ def createHeaterfile(inputDict):
         radii[:] = 0.2
 
     else:
-
         halton = qmc.Halton(d=2, seed=1)
         haltonSample = halton.random(heaterInfo["numSites"])
 
@@ -135,13 +135,8 @@ def createHeaterfile(inputDict):
 
 
 if __name__ == "__main__":
-    # Create an arg parser
-    InputParser = argparse.ArgumentParser(description="Parser For Input File")
-    InputParser.add_argument("-i", "--input", help="Input File", type=str)
-    InputParser.set_defaults(input=None)
-
     # Load toml dictionary
-    inputDict = toml.load(InputParser.parse_args().input)
+    inputDict = toml.load(os.getenv("JobWorkDir") + os.sep + "job.input")
 
     # Create input files
     createParfile(inputDict)

@@ -1,0 +1,44 @@
+# Input file to set runtime parameters
+
+[Heater]
+
+  # Heater dimensions
+  xmin = -4.0
+  xmax = 4.0
+
+  # Number of sites
+  numSites = 300
+
+[Parfile]
+
+  # Size of computational volume
+  xmin = -5.0
+  xmax = 5.0
+
+  # AMR parameters
+  nblockx = 20
+
+  # Restart, checkpoint, and plotting options
+  nend = 1200000
+  tmax = 0.5
+  checkpointFileIntervalTime = 5.0
+  plotFileIntervalTime = 0.1
+
+  # Write checkpoint file every xxxx
+  # seconds of wall clock time. This
+  # is useful to manage queue time. The
+  # value below will write checkpoint
+  # every 6000 seconds
+  wall_clock_checkpoint = 6000
+
+  # Cycle through checkpoints 0-1 in
+  # this case. This reduces the number
+  # of checkpoints that are written.
+  # Cyling just overwrites previous
+  # checkpoints and only stores
+  # the latest.
+  rolling_checkpoint = 2
+
+  restart = ".false."
+  checkpointFileNumber = 0
+  plotFileNumber = 0

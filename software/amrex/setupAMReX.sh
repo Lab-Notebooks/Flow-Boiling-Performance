@@ -5,20 +5,20 @@ if [ ! -d "AMReX" ]; then
 	git clone git@github.com:AMReX-Codes/amrex --branch development AMReX && cd AMReX
 
 	# checkout desired branch
-	git checkout cff96a9
+	git checkout 23.10
 
 else
 	cd AMReX
 fi
 
 # configure and install amrex in 2D
-make clean
+make clean || true
 ./configure --dim=2 --prefix=$AMREX2D_HOME
-make -j
+make
 make install
 
 # configure and install amrex in 3D
-make clean
+make clean || true
 ./configure --dim=3 --prefix=$AMREX3D_HOME
-make -j
+make
 make install

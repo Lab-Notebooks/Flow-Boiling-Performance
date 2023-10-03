@@ -1,0 +1,20 @@
+# YAML configuration file for `jobrunner`.
+
+# job configuration for setting up and submitting jobs,
+# archive and clean artifacts, defining target and
+# input scripts
+job:
+  submit:
+    - flashRun.sh
+  input:
+    - flash.toml
+  archive:
+    - flash.par
+    - "INS*"
+    - "*.out"
+    - "o*.boiling"
+    - "*htr*"
+  clean:
+    - flash.par
+    - "INS*"
+    - "*.out"
