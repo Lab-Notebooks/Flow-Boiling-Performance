@@ -5,7 +5,6 @@ from types import SimpleNamespace
 def console(title, namespace):
     print(f"\n{title}")
     print(f'{" "*2}- {namespace.blocks} Blocks')
-    print(f'{" "*2}- {namespace.blocks} Blocks')
     print(f'{" "*2}- {namespace.procs} MPI ranks')
     print(f'{" "*2}- {int(namespace.blocks/namespace.procs)} Blocks Per Rank')
     print(f'{" "*2}- Volume {namespace.lx}x{namespace.ly}x{namespace.lz} mm\u00b3')
