@@ -35,7 +35,7 @@ summit25 = SimpleNamespace(
 
 summit12 = SimpleNamespace(
     blocks=4800,
-    procs=510,
+    procs=504,
     resolution=0.03 * length_scale_mm,
     simtime=0.5 * time_scale_mm,
     walltime_hours=2,
@@ -60,7 +60,6 @@ summit05 = SimpleNamespace(
     ly=5 * length_scale_mm,
     lz=5 * length_scale_mm,
 )
-
 
 
 hpc3 = SimpleNamespace(
