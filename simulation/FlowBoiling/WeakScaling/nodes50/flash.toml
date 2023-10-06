@@ -20,9 +20,12 @@
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
-  tmax = 0.5
+  tmax = 0.51
   checkpointFileIntervalTime = 5.0
   plotFileIntervalTime = 0.1
+
+  # Overwrite tolerance
+  gr_amrexMG_Tol = 1.0e-13
 
   # Write checkpoint file every xxxx
   # seconds of wall clock time. This

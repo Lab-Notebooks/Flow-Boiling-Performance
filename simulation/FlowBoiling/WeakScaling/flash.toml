@@ -1,5 +1,10 @@
 # Input file to set runtime parameters
 
+[Scaling]
+  # Adding notes for scaling parameters in SI units
+  time = 10e-3 # 10 milliseconds
+  length = 1e-3 # 1 millimeter
+
 [Heater]
 
   # Heater name and number of heaters
