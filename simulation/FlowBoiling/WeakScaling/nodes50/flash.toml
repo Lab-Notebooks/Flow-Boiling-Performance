@@ -7,7 +7,7 @@
   xmax = 48.0
 
   # Number of sites
-  numSites = 3000
+  numSites = 1500
 
 [Parfile]
 
@@ -20,7 +20,7 @@
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
-  tmax = 0.51
+  tmax = 0.91
   checkpointFileIntervalTime = 5.0
   plotFileIntervalTime = 0.1
 
@@ -42,6 +42,6 @@
   # the latest.
   rolling_checkpoint = 2
 
-  restart = ".false."
-  checkpointFileNumber = 0
-  plotFileNumber = 0
+  restart = ".true."
+  checkpointFileNumber = 1
+  plotFileNumber = 7
