@@ -7,7 +7,7 @@
   xmax = 48.0
 
   # Number of sites
-  numSites = 1500
+  numSites = 3000
 
 [Parfile]
 
@@ -20,8 +20,8 @@
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
-  tmax = 0.91
-  checkpointFileIntervalTime = 5.0
+  tmax = 10
+  checkpointFileIntervalTime = 10.0
   plotFileIntervalTime = 0.1
 
   # Overwrite tolerance
@@ -32,7 +32,8 @@
   # is useful to manage queue time. The
   # value below will write checkpoint
   # every 6000 seconds
-  wall_clock_checkpoint = 6000
+  #wall_clock_checkpoint = 6000
+  wall_clock_time_limit = 6000
 
   # Cycle through checkpoints 0-1 in
   # this case. This reduces the number
@@ -44,4 +45,4 @@
 
   restart = ".true."
   checkpointFileNumber = 1
-  plotFileNumber = 7
+  plotFileNumber = 1

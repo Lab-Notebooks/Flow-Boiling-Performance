@@ -17,6 +17,7 @@ job:
     - amrex.pc
     - "INS*"
     - "*.out"
+    - "*.boiling"
   clean:
     - flashx
     - flash.par
