@@ -16,6 +16,7 @@ config.sh
 software/amrex/AMReX
 software/flashx/Flash-X
 software/flashkit/FlashKit
+software/ann/ANN
 boxmem
 *jobnode.archive*
 !software/flashx

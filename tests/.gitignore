@@ -1,0 +1,7 @@
+config
+execfile
+test.info
+TestResults
+LocalArchive
+flashxtest_api.log
+job.*

@@ -1,0 +1,129 @@
+# Input file to set runtime parameters
+
+[Heater]
+  name = "flow_boiling"
+  dim = 1
+
+  # dimensions
+  xmin = -24.0
+  xmax = 24.0
+  ymin = 0.0
+  ymax = 1e-13
+  zmin = -2.5
+  zmax = 2.5
+
+  # Wall temperature
+  wallTemp = 1.0
+
+  # Contact angle information
+  advAngle = 90.0
+  rcdAngle = 45.0
+  velContact = 0.2
+  nucWaitTime = 0.4
+
+  # Number of sites
+  numSites = 300
+  nucSeedRadius = 0.1
+
+[Parfile]
+  ins_invReynolds = 0.0042
+
+  # Gas density and viscosity scaled by liquid
+  mph_rhoGas = 0.0083
+  mph_muGas = 1.0
+  mph_iPropSmear = 1.5
+
+  # Gas thermal conductivity and specific heat
+  mph_thcoGas = 0.25
+  mph_CpGas = 0.83
+
+  # Stefan number and saturation temperature
+  mph_Stefan = 0.5298
+  mph_Tsat = 0.15
+
+  # Inverse Weber Number
+  mph_invWeber = 1.0
+
+  # Prandtl number
+  ht_Prandtl = 8.4
+
+  # Outlet parameters
+  sim_outletBuffer = 2.0  # Outlet Buffer
+  sim_heaterShowInfo = ".FALSE."
+
+  # Grid dimensionality and geometry
+  geometry = "cartesian"
+
+  # Size of computational volume
+  xmin = -25.0
+  xmax = 25.0
+  ymin = 0.0
+  ymax = 5.0
+
+  # Boundary conditions
+  xl_boundary_type = "inflow_ins"
+  xr_boundary_type = "outflow_ins"
+  yl_boundary_type = "noslip_ins"
+  yr_boundary_type = "noslip_ins"
+
+  # Simulation (grid, time, I/O) parameters
+  run_comment = "Flow Boiling problem"
+  log_file = "INS_Flow_Boiling.log"
+  basenm = "INS_Flow_Boiling_"
+  ins_cflFlg = 1
+  ins_cfl = 0.05
+  ins_sigma = 0.05
+  ins_dtSpec = 0.1e-3
+  dtinit = 0.1e-3
+  dtmax = 0.4e-3
+  tstep_change_factor = 1.01
+  ins_pressureCorrect = ".false."
+
+  # Integration Scheme:
+  ins_intSchm = 2
+
+  plot_var_1 = "pres"
+  plot_var_2 = "velx"
+  plot_var_3 = "vely"
+  plot_var_4 = "dfun"
+  plot_var_5 = "temp"
+  plot_var_6 = "mflx"
+  plot_var_7 = "velz"
+
+  ignoreForcedPlot = ".TRUE."
+
+  # AMR parameters
+  nblockx = 100
+  nblocky = 10
+
+  # Set highest number for update
+  # refinement step since in pseudo UG mode
+  nrefs = 10000000
+
+  # lrefine min/max since in UG mode
+  lrefine_min = 1
+  lrefine_max = 1
+
+  # Flux Conservation for AMR
+  flux_correct = ".true."
+
+  # AMReX Poisson Solver Parameters
+  gr_amrexMG_composite_solve = ".TRUE."
+  gr_amrexMG_Tol = 1.0e-13
+  gr_amrexMG_max_iter = 200
+
+  # Velocity scale
+  ins_inflowVelScale = 1.0
+
+  # Gravity
+  ins_gravY = -1.0
+
+  # Restart, checkpoint, and plotting options
+  nend = 1200000
+  tmax = 1.0
+  checkpointFileIntervalTime = 1.0
+  plotFileIntervalTime = 0.1
+
+  restart = ".false."
+  checkpointFileNumber = 0
+  plotFileNumber = 0
