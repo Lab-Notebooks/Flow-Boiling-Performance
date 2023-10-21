@@ -120,7 +120,7 @@
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
-  tmax = 1.0
+  tmax = 10.0
   checkpointFileIntervalTime = 1.0
   plotFileIntervalTime = 0.1
 
