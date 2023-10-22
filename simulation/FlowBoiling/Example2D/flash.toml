@@ -26,6 +26,8 @@
   nucSeedRadius = 0.1
 
 [Parfile]
+  CSVSummaryAllProcs = ".TRUE."
+
   ins_invReynolds = 0.0042
 
   # Gas density and viscosity scaled by liquid
@@ -120,10 +122,11 @@
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
-  tmax = 10.0
+  tmax = 1.0
   checkpointFileIntervalTime = 1.0
   plotFileIntervalTime = 0.1
 
   restart = ".false."
   checkpointFileNumber = 0
+  rolling_checkpoint = 2
   plotFileNumber = 0
