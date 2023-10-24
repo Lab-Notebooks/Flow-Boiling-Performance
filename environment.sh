@@ -36,7 +36,7 @@ export LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 # Store path to ANN
 export ANN_HOME="$PROJECT_HOME/software/ann/ANN"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ANN_HOME/lib"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ANN_HOME/lib:$HPC_TOOLKIT_HOME/lib/hpctoolkit"
 export LIBRARY_PATH="$LD_LIBRARY_PATH"
 
 # Path to Flash-X
@@ -70,4 +70,5 @@ echo "BITTREE_3D_HOME=$BITTREE_3D_HOME"
 echo "FLASHTEST_MAIN_ARCHIVE=$FLASHTEST_MAIN_ARCHIVE"
 echo "FLASHTEST_LOCAL_ARCHIVE=$FLASHTEST_LOCAL_ARCHIVE"
 echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+echo "HPC_TOOLKIT_HOME=$HPC_TOOLKIT_HOME"
 echo "---------------------------------------------------------------------------------------"

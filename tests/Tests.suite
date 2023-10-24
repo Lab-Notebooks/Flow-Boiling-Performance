@@ -1,5 +1,3 @@
-# Test suite file for ganon_jenkins
-#
 # File containing details of test specifications for
 # specific simulations that reference keys defined in
 # tests/tests.toml files defined in the simulation
@@ -17,7 +15,12 @@
 # --rbase, -rbase 	Date string YYYY-MM-DD[_version]
 # --tolerance, -tol	Tolerance for SFOCU
 
+incompFlow/ChannelFlow -t "UnitTest/incompFlow/ChanneFlow/2d/Periodic" -np 4
+incompFlow/ChannelFlow -t "Comparison/incompFlow/ChanneFlow/AMReX/2d" -np 4 -cbase 2023-09-15_5
+incompFlow/ChannelFlow -t "Comparison/incompFlow/ChanneFlow/Paramesh/2d" -np 4 -cbase 2023-09-15_5
+incompFlow/RisingBubble -t "UnitTest/RisingBubble/AMReX/2d" -np 3
+incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReX/2d" -np 3 -cbase 2023-09-15_5
+incompFlow/RisingBubble -t "Comparison/RisingBubble/Paramesh/2d" -np 3 -cbase 2023-09-15_5
 incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReXGCFill/2d" -np 3 -cbase 2023-10-21
 incompFlow/RisingBubble -t "Comparison/RisingBubble/ParameshGCFill/2d" -np 3 -cbase 2023-10-21
-incompFlow/RisingBubble -t "Comparison/RisingBubble/AMReX/2d" -np 3 -cbase 2023-10-21_2
-incompFlow/RisingBubble -t "Comparison/RisingBubble/Paramesh/2d" -np 3 -cbase 2023-10-21_2
+incompFlow/PoolBoiling -t "Comparison/incompFlow/PoolBoiling/2d/AMReX" -np 4 -cbase 2023-04-03
