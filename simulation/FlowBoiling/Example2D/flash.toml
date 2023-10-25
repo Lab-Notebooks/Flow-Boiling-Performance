@@ -114,6 +114,12 @@
   gr_amrexMG_Tol = 1.0e-13
   gr_amrexMG_max_iter = 200
 
+  gr_hyprePrintSolveInfo = ".FALSE."
+  gr_hyprePcType = "HYPRE_AMG"
+  gr_hypreSolverType = "HYPRE_BICGSTAB"
+  gr_hypreRelTol = 1e-12
+  gr_hypreFloor = 1e-16
+
   # Velocity scale
   ins_inflowVelScale = 1.0
 

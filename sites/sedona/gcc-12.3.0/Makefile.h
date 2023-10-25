@@ -13,7 +13,7 @@ PAPI_PATH    =
 NCMPI_PATH   =
 AMREX_PATH   = $(AMREX$(NDIM)D_HOME)
 BITTREE_PATH = $(BITTREE_$(NDIM)D_HOME)
-HPC_TOOLKIT_PATH = $(HPC_TOOLKIT_HOME)
+HPCTOOLKIT_PATH = $(HPC_TOOLKIT_HOME)
 
 #----------------------------------------------------------------------------
 # Compiler and linker commands
@@ -57,7 +57,7 @@ FFLAGS_TEST  = -ggdb -c -fdefault-real-8 -fdefault-double-8 \
 FFLAGS_HYPRE = -I${HYPRE_PATH}/include
 FFLAGS_AMREX = -I${AMREX_PATH}/include
 FFLAGS_HDF5  = -DH5_USE_18_API
-FFLAGS_HPC_TOOLKIT = -g
+FFLAGS_HPCTOOLKIT = -g
 F90FLAGS     =
 
 #------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ LIB_AMREX  = -L${AMREX_PATH}/lib -lamrex -lpthread
 LIB_BITTREE = -L${BITTREE_PATH}/lib -lbittree
 LIB_STDCXX = -lstdc++
 LIB_LAPACK = -llapack -lblas
-LIB_HPC_TOOLKIT = -L${HPC_TOOLKIT_PATH}/lib/hpctoolkit -lhpctoolkit
+LIB_HPCTOOLKIT = -L${HPCTOOLKIT_PATH}/lib/hpctoolkit -lhpctoolkit
 
 # Uncomment the following line to use electic fence memory debugger.
 # Need the following environmental variable (see env.sh):
