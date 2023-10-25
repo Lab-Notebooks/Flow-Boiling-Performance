@@ -5,7 +5,8 @@ import click
 
 @click.command(name="configure")
 @click.option("--site", "-s", type=str, help="Site Directory")
-def configure(site):
+@click.option("--profile", is_flag=True, help="Profile code")
+def configure(site, profile):
     """
     \b
     Configuration command to generate config.sh
@@ -17,6 +18,7 @@ def configure(site):
 
         config_file.write("# This file is generated using configuration script\n")
         config_file.write(f'SiteName="{site}"\n')
+        config_file.write(f'Profile={profile}\n')    
 
 if __name__ == "__main__":
     configure()
