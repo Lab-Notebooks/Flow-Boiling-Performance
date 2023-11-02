@@ -1,0 +1,17 @@
+# AMReX Version: 23.11
+
+prefix=/gpfs/alpine/ast136/proj-shared/adhruv/Flow-Boiling-3D/software/amrex/AMReX/install-summit/gcc-10.2.0/2D
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+fflags= -g -O3 -ffree-line-length-none -fno-range-check -fno-second-underscore -fimplicit-none  
+
+Name: amrex
+Description: Software Framework for Block Structured AMR
+Version:
+URL: https://github.com/AMReX-Codes/amrex
+Requires:
+Cflags: -I${includedir}  -Werror=return-type -g -O3 -std=c++17  -pthread  
+Libs: -L${libdir} -lamrex -L/sw/summit/gcc/10.2.0-2/lib64/../lib64/  -lmpi_ibm_mpifh -lmpi_ibm -lgfortran
+Libs.private: 

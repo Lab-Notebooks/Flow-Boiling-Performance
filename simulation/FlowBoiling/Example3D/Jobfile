@@ -22,5 +22,7 @@ job:
     - flashx
     - flash.par
     - amrex.pc
-    - "INS*"
+    - "*_hdf5_plt_*"
+    - "*_hdf5_grd_*"
+    - "*_hdf5_htr_*"
     - "*.out"

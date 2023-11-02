@@ -1,4 +1,4 @@
-if [[ $SiteName == "summit" ]]; then
+if [[ $SiteName == "summit/gcc-10.2.0" || $SiteName == "summit/gcc-9.3.0" ]]; then
 
 	echo Running on $SiteName
 

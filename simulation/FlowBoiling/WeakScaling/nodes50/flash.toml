@@ -44,5 +44,5 @@
   rolling_checkpoint = 2
 
   restart = ".true."
-  checkpointFileNumber = 1
-  plotFileNumber = 1
+  checkpointFileNumber = 2
+  plotFileNumber = 0
