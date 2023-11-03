@@ -14,6 +14,7 @@ job:
     - flash.toml
   archive:
     - amrex.pc
+    - flashx
   clean:
     - flashx
     - amrex.pc

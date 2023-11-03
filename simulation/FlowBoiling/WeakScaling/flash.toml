@@ -31,6 +31,9 @@
 
 [Parfile]
 
+  zfp_reversible=1
+  zfp_accuracy_plt=1e-5
+
   # Inverse of Reynolds Number
   ins_invReynolds = 0.0042
 

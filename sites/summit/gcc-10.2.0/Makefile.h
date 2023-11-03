@@ -53,6 +53,11 @@ ifdef OLCF_NETLIB_LAPACK_ROOT
     LIB_LAPACK    += -L${LAPACK_PATH}/lib64 -llapack -lblas
 endif
 
+SZ_PATH    = /gpfs/alpine/csc300/world-shared/gnu_build/SZ/install
+SZ3_PATH   = /gpfs/alpine/csc300/world-shared/gnu_build/SZ3/build/install
+ZFP_PATH   = /gpfs/alpine/csc300/world-shared/gnu_build/zfp-0.5.5
+H5Z_PATH   = /gpfs/alpine/csc300/world-shared/gnu_build/H5Z-ZFP-0.5.5/install
+
 #----------------------------------------------------------------------------
 # Compiler and linker commands
 #
@@ -103,6 +108,9 @@ DEBUG_FLAGS  = -g -Og
 FFLAGS_OPT   = -c ${OPT_FLAGS}
 FFLAGS_TEST  = -c ${TEST_FLAGS}
 FFLAGS_DEBUG = -c ${DEBUG_FLAGS} -fcheck=bounds,do,mem,pointer -ffpe-trap=invalid,zero,overflow -fbacktrace
+FFLAGS_SZ    = -I${SZ_PATH}/include
+FFLAGS_SZ3   = -I${SZ3_PATH}/include
+FFLAGS_ZFP   = -I${ZFP_PATH}/include -I${H5Z_PATH}/include
 
 F90FLAGS     = -fdefault-real-8 -fdefault-double-8 -fimplicit-none -ffree-line-length-none -fallow-argument-mismatch -cpp
 f90FLAGS     = ${F90FLAGS}
@@ -117,6 +125,10 @@ CFLAGS_CUDA  = -I${CUDA_PATH}/include
 CFLAGS_MAGMA = -I${MAGMA_PATH}/include
 CFLAGS_OACC  = -fopenacc
 CFLAGS_UNIFYFS = -I${UNIFYFS_ROOT}
+CFLAGS_SZ    = -I${SZ_PATH}/include
+CFLAGS_SZ3   = -I${SZ3_PATH}/include
+CFLAGS_ZFP   = -I${ZFP_PATH}/include -I${H5Z_PATH}/include
+
 
 CFLAGS_OPT   = -c ${OPT_FLAGS}
 CFLAGS_TEST  = -c ${TEST_FLAGS}
@@ -162,6 +174,10 @@ LIB_UNIFYFS = -L${UNIFYFS_ROOT} -lunifyfs_mpi_gotcha
 LIB_OPT   =
 LIB_DEBUG =
 LIB_TEST  =
+
+LIB_SZ    = -L${SZ_PATH}/lib -L${SZ_PATH}/lib64 -DFLASH_HDF5_SZ -lSZ -lhdf5sz -Wl,-rpath,${SZ_PATH}/lib -Wl,-rpath,${SZ_PATH}/lib64
+LIB_SZ3   = -L${SZ3_PATH}/lib -L${SZ3_PATH}/lib64 -DFLASH_HDF5_SZ3 -lhdf5sz3 -Wl,-rpath,${SZ3_PATH}/lib -Wl,-rpath,${SZ3_PATH}/lib64
+LIB_ZFP   = -L${ZFP_PATH}/lib64 -DFLASH_HDF5_ZFP -L${H5Z_PATH}/lib -lh5zzfp -lzfp -Wl,-rpath,${ZFP_PATH}/lib64 -Wl,-rpath,${H5Z_PATH}/lib
 
 #----------------------------------------------------------------------------
 # Additional machine-dependent object files

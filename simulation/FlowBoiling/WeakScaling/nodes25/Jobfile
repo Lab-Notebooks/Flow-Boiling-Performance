@@ -10,11 +10,18 @@ job:
     - flash.toml
   archive:
     - flash.par
-    - "INS*"
+    - "*_hdf5_plt_*"
+    - "*_hdf5_grd_*"
+    - "*.log"
     - "*.out"
     - "o*.boiling"
     - "*htr*"
+    - job.target
   clean:
     - flash.par
-    - "INS*"
+    - "*_hdf5_plt_*"
+    - "*_hdf5_grd_*"
+    - "*htr*"
+    - "*.log"
     - "*.out"
+    - "o*.boiling"

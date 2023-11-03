@@ -14,8 +14,9 @@ job:
     - "*.out"
     - "o*.boiling"
     - "*htr*"
-    - job.target
   clean:
     - flash.par
-    - "INS*"
+    - "*_hdf5_plt_*"
+    - "*_hdf5_grd_*"
+    - "*_hdf5_htr_*"
     - "*.out"

@@ -3,26 +3,29 @@
 [Heater]
 
   # Heater dimensions
-  xmin = -24.0
-  xmax = 24.0
+  xmin = -98.0
+  xmax = 98.0
 
   # Number of sites
-  numSites = 1500
+  numSites = 6000
 
 [Parfile]
 
   # Size of computational volume
-  xmin = -25.0
-  xmax = 25.0
+  xmin = -100.0
+  xmax = 100.0
 
   # AMR parameters
-  nblockx = 100
+  nblockx = 400
 
   # Restart, checkpoint, and plotting options
   nend = 1200000
   tmax = 10
-  checkpointFileIntervalTime = 12.0
+  checkpointFileIntervalTime = 10.0
   plotFileIntervalTime = 0.1
+
+  # Overwrite tolerance
+  gr_amrexMG_Tol = 1.0e-12
 
   # Write checkpoint file every xxxx
   # seconds of wall clock time. This
@@ -40,6 +43,6 @@
   # the latest.
   rolling_checkpoint = 2
 
-  restart = ".true."
+  restart = ".false."
   checkpointFileNumber = 0
   plotFileNumber = 0

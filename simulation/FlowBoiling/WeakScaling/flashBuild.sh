@@ -2,7 +2,7 @@
 NodeDir=$(realpath .)
 
 # run Flash-X setup
-cd $FLASHX_HOME && git checkout 2aac00e7 && ./setup $FlashOptions
+cd $FLASHX_HOME && git checkout 2b1e1f37 && ./setup $FlashOptions
 
 # compile the simulation and copy files
 cd $FLASHX_HOME/object && make -j && cp flashx $NodeDir/

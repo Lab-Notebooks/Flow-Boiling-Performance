@@ -15,4 +15,5 @@ if [[ $SiteName == "summit/gcc-10.2.0" || $SiteName == "summit/gcc-9.3.0" ]]; th
 	export NCORES_PER_MPI=$(($NCORES_PER_RS / $NMPI_PER_RS))
 	export NRS=$(($NNODES * $NRS_PER_NODE))
 	export OMP_NUM_THREADS=1
+	export ROMIO_HINTS=$JobWorkDir/romio.hints 
 fi
