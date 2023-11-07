@@ -15,9 +15,12 @@ job:
   archive:
     - flash.par
     - amrex.pc
-    - "INS*"
     - "*.out"
     - "*.boiling"
+    - "*_hdf5_plt_*"
+    - "*_hdf5_grd_*"
+    - "*_hdf5_htr_*"
+    - "*.log"
   clean:
     - flashx
     - flash.par
@@ -26,3 +29,4 @@ job:
     - "*_hdf5_grd_*"
     - "*_hdf5_htr_*"
     - "*.out"
+    - "*.log"
