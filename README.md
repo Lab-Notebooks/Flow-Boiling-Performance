@@ -34,5 +34,7 @@ For instructions on how to use the notebook please see the README for these repo
   over all nucleation sites. This lead to developments on the Flash-X side to enable masked guard-cell filling. Re-evaluation of the performance
   (https://github.com/Lab-Notebooks/Flow-Boiling-Performance/blob/main/analysis/performance/profile-oct-2023-gc-optimized.ipynb) resulted in reduced communication time
 
-- November, 2023: Futher improvements in performance were achieved by tweaking runtime parameters and avoiding conditional statement in Amrex/Grid_fillGuardCells. The
+- November, 2023: Futher improvements in performance were achieved by tweaking runtime parameters and avoiding conditional statements in Amrex/Grid_fillGuardCells. The
   renucleation algorithm was also optimized (https://github.com/Lab-Notebooks/Flow-Boiling-Performance/blob/main/analysis/performance/profile-nov-2023.ipynb)
+
+  
