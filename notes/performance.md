@@ -27,3 +27,7 @@ Length scales:
 
 - 60 milliseconds, 24 hours of wall time
 - 2.5 millisecond/hour
+
+## Updates
+
+The performance was improved to 10 millisecond/hour after some optimization (https://github.com/Lab-Notebooks/Flow-Boiling-Performance/blob/main/analysis/performance/profile-nov-2023.ipynb)
