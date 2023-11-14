@@ -37,4 +37,6 @@ For instructions on how to use the notebook please see the README for these repo
 - November, 2023: Futher improvements in performance were achieved by tweaking runtime parameters and avoiding conditional statements in Amrex/Grid_fillGuardCells. The
   renucleation algorithm was also optimized (https://github.com/Lab-Notebooks/Flow-Boiling-Performance/blob/main/analysis/performance/profile-nov-2023.ipynb)
 
+
+<p align="center"> <img src="analysis/performance/performance.gif" width="1500" style="border:none;background:none;"/> </p>
   
