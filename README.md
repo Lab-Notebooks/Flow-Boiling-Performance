@@ -17,13 +17,14 @@ For instructions on how to use the notebook please see the README for these repo
 
 - Configure your experiment by running `./configure -s <your-site>`
 
-- Build software stack `jobrunner setup software/amrex software/flashkit software/flashx`
+- Build software stack `jobrunner setup software/amrex software/flashkit software/flashx -V`. `-V` is for verbose
 
-- Setup an experiment using `jobrunner setup simulation/FlowBoiling/<experiment-name>`. `Example2D` is a lightweight
+- Setup an experiment using `jobrunner setup simulation/FlowBoiling/<experiment-name> -V`. `Example2D` is a lightweight
   two-dimensional simulations and `Example3D` and `WeakScaling` are production 3D simulations
 
 - Run the experiment using `jobrunner submit simulation/FlowBoiling/<experiment-name>`. Edit the `Jobfile` in root directory
-  to set schedular specific options or just `bash` if you want to run it interactively.
+  to set schedular specific options or just `bash` if you want to run it interactively. When running in bash mode use `-V` for
+  verbosity.
 
 - You can postprocess results using `flashkit`. See the instructions here: https://github.com/Lab-Notebooks/Outflow-Forcing-BubbleML
 
