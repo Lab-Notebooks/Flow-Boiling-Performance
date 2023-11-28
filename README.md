@@ -39,4 +39,19 @@ For instructions on how to use the notebook please see the README for these repo
 
 
 <p align="center"> <img src="analysis/performance/performance.gif" width="1500" style="border:none;background:none;"/> </p>
-  
+
+### Citation
+
+```
+@software{akash_dhruv_2023_10211775,
+  author       = {Akash Dhruv},
+  title        = {{Lab-Notebooks/Flow-Boiling-Performance: zenodo 
+                   archive}},
+  month        = nov,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {zenodo},
+  doi          = {10.5281/zenodo.10211775},
+  url          = {https://doi.org/10.5281/zenodo.10211775}
+}
+```
